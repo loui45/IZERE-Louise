@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form and Data Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(../pics/premium_photo-1671995576541-a63078fa3063.jpg);
+            background-size: cover;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+        input[type="range"] {
+            width: 100%; 
+         }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .checkbox-group {
+            margin: 20px 0;
+        }
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .submit-btn {
+            padding: 12px;  
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        textarea{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form action="form.php" method="post">
+        <label for="Firstname">FirstName </label>
+        <input type="text" id="FirstName" name="FirstName" required>
+
+        <label for="Lastname">LastName </label>
+        <input type="text" id="LastName" name="LastName" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="male"> Male 
+        <input type="radio" name="gender" value="female"> Female <br><br>
+
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" name="DOB" required><br><br>
+
+        <label for="interests">Select your interests:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="baketball" name="interests[]" value="baketball">
+            <label for="baketball">baketball</label>
+            <input type="checkbox" id="Football" name="interests[]" value="Football">
+            <label for="Football">Football</label>
+            <input type="checkbox" id="Volleyball" name="interests[]" value="Volleyball">
+            <label for="Volleyball">Volleyball</label>
+            <input type="checkbox" id="Cricket" name="interests[]" value="Cricket">
+            <label for="Cricket">Cricket</label>
+        </div><br><br>
+
+        <label for="color">Preferred sports clothes color:</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="time">Preferred Time For Training:</label>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <label for="hobby">what is your hobby:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="Music" name="hobby[]" value="Music">
+            <label for="Music">Music</label>
+            <input type="checkbox" id="Arts" name="hobby[]" value="Arts">
+            <label for="Arts">Arts</label>
+            <input type="checkbox" id="Sports" name="hobby[]" value="Sports">
+            <label for="Sports">Sports</label>
+            <input type="checkbox" id="Reading" name="hobby[]" value="Reading">
+            <label for="Reading">Reading</label>
+            <input type="checkbox" id="Other" name="hobby[]" value="Other">
+            <label for="Cricket">Other</label>
+        </div><br><br>
+
+        <div class="form-group">
+            <label for="continent">Continent:</label>
+            <select id="continent" name="continent">
+                <option value="America">America</option>
+                <option value="Europe">Europe</option>
+                <option value="Asia">Asia</option>
+                <option value="Africa">Africa</option>
+            </select>
+        </div><br><br>
+
+        <label for="image">Upload your picture:</label>
+        <input type="file" id="image" name="image"><br><br>
+
+        <label for="message">Why do you want to join "YoungChamps League":</label><br>
+        <textarea id="message" name="message" rows="6" placeholder="Enter your reason(s) here"></textarea><br><br>
+
+        <label for="subscription">Subscribe to our newsletter?</label>
+        <input type="checkbox" id="subscription" name="subscription" value="yes"><br><br>
+
+        <label for="volume">Volume:</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" step="1">
+
+        <button type="submit" class="submit-btn">Register</button>
+    </form>
+</div>
+</body>
+</html>
